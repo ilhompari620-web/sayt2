@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Auto Portal — To'liq Matnli va Texnik Katalog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Global Auto Portal</h1>
+    <p>Barcha brendlarning 1-tarixiy modellaridan tortib Teslaning uchadigan konseptigacha (Rasmlar, fotosuratlar va aniq texnik ma'lumotlar)</p>
+</header>
+
+<div class="controls">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Mashina nomi, yili, brendi, dvigatel, quvvati yoki turini qidiring (masalan: Tico, Cobalt, U8, Song Plus, L9, M5, 500 E, GT3 RS, F40, Supra, Spectre)...">
+    </div>
+    <div class="brand-filters" id="brandFilters">
+        <button class="filter-btn active" data-brand="ALL">Barchasi</button>
+        <button class="filter-btn" data-brand="Uzbekistan Chevrolet">Uzbekistan Chevrolet</button>
+        <button class="filter-btn" data-brand="BYD">BYD</button>
+        <button class="filter-btn" data-brand="Li Auto & Zeekr">Li Auto & Zeekr</button>
+        <button class="filter-btn" data-brand="Tesla">Tesla</button>
+        <button class="filter-btn" data-brand="BMW">BMW</button>
+        <button class="filter-btn" data-brand="Mercedes-Benz">Mercedes-Benz</button>
+        <button class="filter-btn" data-brand="Porsche">Porsche</button>
+        <button class="filter-btn" data-brand="Ferrari">Ferrari</button>
+        <button class="filter-btn" data-brand="Lamborghini">Lamborghini</button>
+        <button class="filter-btn" data-brand="Bugatti">Bugatti</button>
+        <button class="filter-btn" data-brand="Rolls-Royce & Bentley">Rolls-Royce & Bentley</button>
+        <button class="filter-btn" data-brand="McLaren & Aston Martin">McLaren & Aston Martin</button>
+        <button class="filter-btn" data-brand="Audi">Audi</button>
+        <button class="filter-btn" data-brand="Toyota & Lexus">Toyota & Lexus</button>
+        <button class="filter-btn" data-brand="Nissan">Nissan</button>
+        <button class="filter-btn" data-brand="Hyundai & Kia">Hyundai & Kia</button>
+        <button class="filter-btn" data-brand="Ford & Amerikan">Ford & Amerikan</button>
+        <button class="filter-btn" data-brand="Volkswagen">Volkswagen</button>
+        <button class="filter-btn" data-brand="Fiat">Fiat</button>
+    </div>
+</div>
+
+<div class="stats-bar" id="statsBar"></div>
+
+<div class="container" id="carsContainer"></div>
+
+<!-- Modal -->
+<div class="modal" id="carModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <div class="modal-image-box">
+            <img src="" alt="" id="modalImg" class="modal-img">
+        </div>
+        <div class="modal-info">
+            <div class="modal-badges">
+                <span class="badge" id="modalBrand"></span>
+                <span class="type-badge" id="modalType"></span>
+                <span class="year-badge" id="modalYear"></span>
+            </div>
+            <h2 id="modalTitle" style="margin-top: 12px;"></h2>
+            <p id="modalDesc" style="color: var(--text-muted); margin: 12px 0 18px;"></p>
+            <div id="modalSpecs" class="specs"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Global Auto Portal | Muallif: Saidov Samandar</p>
+</footer>
+
+<script src="js/cars-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
